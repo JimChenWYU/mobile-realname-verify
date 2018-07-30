@@ -1,0 +1,30 @@
+{
+    "name": "jimchen/mobile-realname-sms",
+    "description": "极速API手机号实名认证",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JimChen",
+            "email": "18219111672@163.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JimChen\\MobileRealNameVerify\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JimChen\\MobileRealNameVerify\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "mockery/mockery": "^0.9"
+    }
+}
