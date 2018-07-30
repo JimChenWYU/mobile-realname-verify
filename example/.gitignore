@@ -1,8 +1,3 @@
-*.DS_Store
-.idea
-/vendor
-/coverage
-sftp-config.json
+vendor
 composer.lock
-.subsplit
-.php_cs.cache
+.env

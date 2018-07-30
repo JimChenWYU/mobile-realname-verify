@@ -13,7 +13,7 @@ $object = new \JimChen\MobileRealNameVerify\MobileRealNameVerify([
 ]);
 
 try {
-    var_dump($object->verify(getenv('TEST_MOBILE'), getenv('TEST_REAL_NAME'), getenv('TEST_ID_CARD')));
+    var_dump($object->verify(getenv('TEST_MOBILE'), $_ENV['TEST_REAL_NAME'], getenv('TEST_ID_CARD')));
 } catch (\Exception $e) {
     var_dump($e->getCode());
     var_dump($e->getMessage());
