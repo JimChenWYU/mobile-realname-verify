@@ -1,6 +1,6 @@
 # mobile-realname-verify
 
-极速API手机号实名认证
+极速API手机号实名认证，[官方文档](https://www.jisuapi.com/api/mobileverify/)
 
 ## Requirement
 
