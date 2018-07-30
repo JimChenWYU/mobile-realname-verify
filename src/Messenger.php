@@ -75,6 +75,10 @@ class Messenger implements MessengerInterface
             'exceptions'  => false,
         ]);
 
+        if (is_string($response)) {
+            $response = json_decode($response, true);
+        }
+
         if (0 != $response['status']) {
             throw new RequestErrorException($response['msg'], $response['status'], $response);
         }
@@ -106,6 +110,10 @@ class Messenger implements MessengerInterface
             'headers'     => $headers,
             'exceptions'  => false,
         ]);
+
+        if (is_string($response)) {
+            $response = json_decode($response, true);
+        }
 
         if (0 != $response['status']) {
             throw new RequestErrorException($response['msg'], $response['status'], $response);
