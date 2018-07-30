@@ -1,5 +1,5 @@
 {
-    "name": "jimchen/mobile-realname-sms",
+    "name": "jimchen/mobile-realname-verify",
     "description": "极速API手机号实名认证",
     "type": "library",
     "license": "MIT",
