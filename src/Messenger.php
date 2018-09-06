@@ -84,7 +84,7 @@ class Messenger implements MessengerInterface
         }
 
         if (0 != $response['result']['verifystatus']) {
-            throw new CheckoutFailureException($response['verifymsg'], $response['result']['verifystatus'], $response['result']);
+            throw new CheckoutFailureException('Checkout Failure.', $response['result']['verifystatus'], $response['result']);
         }
 
         return $response['result'];
