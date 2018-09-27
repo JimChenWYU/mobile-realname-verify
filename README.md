@@ -9,7 +9,7 @@
 ## Installing
 
 ```shell
-$ composer require jimchen/mobile-realname-verify -vvv
+$ composer require jimchen/mobile-realname-verify:~2.0
 ```
 
 ## Usage
