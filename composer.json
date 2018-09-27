@@ -1,6 +1,6 @@
 {
     "name": "jimchen/mobile-realname-verify",
-    "description": "极速API手机号实名认证",
+    "description": "手机号实名认证",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,16 +11,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "JimChen\\MobileRealNameVerify\\": "src"
+            "JimChen\\Authentication\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JimChen\\MobileRealNameVerify\\Tests\\": "tests"
+            "Tests\\": "tests"
         }
     },
     "require": {
         "php": ">=5.5",
+        "ext-json": "*",
+        "ext-openssl": "*",
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {

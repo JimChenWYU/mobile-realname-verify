@@ -1,6 +1,6 @@
 # mobile-realname-verify
 
-极速API手机号实名认证，[官方文档](https://www.jisuapi.com/api/mobileverify/)
+手机号实名认证
 
 ## Requirement
 
@@ -15,20 +15,17 @@ $ composer require jimchen/mobile-realname-verify -vvv
 ## Usage
 
 ```php
-use JimChen\MobileRealNameVerify\MobileRealNameVerify;
+use JimChen\Authentication\Authentication;
+use JimChen\Authentication\Gateways\JuheGateway;
 
-$object = new MobileRealNameVerify([
-    'appkey' => '6745abcdefg'
+$juhe = \JimChen\Authentication\Authentication::juhe([
+    'key'    => 'your key',
+    'openid' => 'your openid',
+    'type'   => JuheGateway::COMMON
 ]);
 
-// 获取证件类型
-$object->type();
-
-// 设置证件类型
-$object->setTypeId('typeid');
-
 // 手机号码实名认证
-$object->verify('Mobile Number', 'Real Name', 'ID Card');
+$juhe->verify('Real Name', 'ID Card', 'Mobile Number');
 ```
 
 ## License

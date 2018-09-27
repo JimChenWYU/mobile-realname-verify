@@ -1,12 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lenovo
- * Date: 7/27/2018
- * Time: 1:54 PM
+
+/*
+ * This file is part of the jimchen/mobile-realname-verify.
+ *
+ * (c) JimChen <18219111672@163.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
  */
 
-namespace JimChen\MobileRealNameVerify\Traits;
+namespace JimChen\Authentication\Traits;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
@@ -26,7 +28,7 @@ trait HasHttpRequest
     {
         return $this->request('get', $endpoint, [
             'headers' => $headers,
-            'query'   => $query,
+            'query' => $query,
         ]);
     }
 
@@ -42,7 +44,7 @@ trait HasHttpRequest
     protected function post($endpoint, $params = [], $headers = [])
     {
         return $this->request('post', $endpoint, [
-            'headers'     => $headers,
+            'headers' => $headers,
             'form_params' => $params,
         ]);
     }
@@ -60,7 +62,7 @@ trait HasHttpRequest
     {
         return $this->request('post', $endpoint, [
             'headers' => $headers,
-            'json'    => $params,
+            'json' => $params,
         ]);
     }
 
@@ -69,7 +71,7 @@ trait HasHttpRequest
      *
      * @param string $method
      * @param string $endpoint
-     * @param array  $options http://docs.guzzlephp.org/en/latest/request-options.html
+     * @param array  $options  http://docs.guzzlephp.org/en/latest/request-options.html
      *
      * @return array
      */
@@ -87,7 +89,7 @@ trait HasHttpRequest
     {
         $options = [
             'base_uri' => method_exists($this, 'getBaseUri') ? $this->getBaseUri() : '',
-            'timeout'  => property_exists($this, 'timeout') ? $this->timeout : 5.0,
+            'timeout' => property_exists($this, 'timeout') ? $this->timeout : 5.0,
         ];
 
         return $options;

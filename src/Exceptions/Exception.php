@@ -1,12 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lenovo
- * Date: 7/30/2018
- * Time: 10:22 AM
+
+/*
+ * This file is part of the jimchen/mobile-realname-verify.
+ *
+ * (c) JimChen <18219111672@163.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
  */
 
-namespace JimChen\MobileRealNameVerify\Exceptions;
+namespace JimChen\Authentication\Exceptions;
 
 class Exception extends \Exception
 {
@@ -15,7 +17,7 @@ class Exception extends \Exception
      */
     private $raw;
 
-    public function __construct($message = "", $code = 0, $raw = [])
+    public function __construct($message = '', $code = 0, $raw = [])
     {
         parent::__construct($message, $code, null);
         $this->raw = $raw;

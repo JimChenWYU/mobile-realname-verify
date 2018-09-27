@@ -1,12 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lenovo
- * Date: 7/30/2018
- * Time: 10:29 AM
+
+/*
+ * This file is part of the jimchen/mobile-realname-verify.
+ *
+ * (c) JimChen <18219111672@163.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
  */
 
-namespace JimChen\MobileRealNameVerify\Support;
+namespace JimChen\Authentication\Support;
 
 use ArrayAccess;
 
@@ -19,6 +21,7 @@ class Config implements ArrayAccess
      * @var array
      */
     protected $config;
+
     /**
      * Config constructor.
      *
@@ -28,6 +31,7 @@ class Config implements ArrayAccess
     {
         $this->config = $config;
     }
+
     /**
      * Get an item from an array using "dot" notation.
      *
@@ -54,8 +58,10 @@ class Config implements ArrayAccess
             }
             $config = $config[$segment];
         }
+
         return $config;
     }
+
     /**
      * Whether a offset exists.
      *
@@ -76,6 +82,7 @@ class Config implements ArrayAccess
     {
         return array_key_exists($offset, $this->config);
     }
+
     /**
      * Offset to retrieve.
      *
@@ -93,6 +100,7 @@ class Config implements ArrayAccess
     {
         return $this->get($offset);
     }
+
     /**
      * Offset to set.
      *
@@ -113,6 +121,7 @@ class Config implements ArrayAccess
             $this->config[$offset] = $value;
         }
     }
+
     /**
      * Offset to unset.
      *
